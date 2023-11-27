@@ -16,13 +16,11 @@ jobs:
 
     steps:
     - uses: actions/checkout@v4.1.1
+    - name: Get Rags
+      uses: GuillaumeFalourd/clone-github-repo-action@v2
       with:
-        repository: run-llama/rags
-        path: rags
-        clean: false
-    - uses: actions/checkout@v4.1.1
-      with:
-        clean: false
+        owner: 'run-llama'
+        repository: 'rags'
     - name: Merge Repos
       run: mv rags/* .
     - name: List Files
