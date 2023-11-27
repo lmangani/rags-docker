@@ -18,7 +18,10 @@ jobs:
     - uses: actions/checkout@v4.1.1
       with:
         name: run-llama/rags
+        clean: false
     - uses: actions/checkout@v4.1.1
+      with:
+        clean: false
     - name: List Files
       run: ls -alFh
     - name: Log in to the Container registry
