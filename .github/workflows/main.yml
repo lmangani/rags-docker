@@ -22,7 +22,9 @@ jobs:
         owner: 'run-llama'
         repository: 'rags'
     - name: Merge Repos
-      run: mv rags/* .
+      run: |
+        mv rags/builder_config.py rags/builder_config.old
+        mv rags/* .
     - name: List Files
       run: ls -alFh
     - name: Log in to the Container registry
