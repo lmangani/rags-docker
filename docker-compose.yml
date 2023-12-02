@@ -7,7 +7,7 @@ services:
     environment:
       - OPENAI_API_KEY=""
       - OPENAI_API_BASE="http://gpt4free-api:1337/v1"
-  gpt4free-api: gpt4free
+  gpt4free-api:
     image: ghcr.io/lmangani/rags-docker-gtp4free:latest
     ports:
       - '1337:1337'
